@@ -23,5 +23,5 @@ def achar_porta_livre():
       s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
       return s.getsockname()[1]
 
-if __name__ == '__main__':
-   app.run(debug=True, port=achar_porta_livre())
+#if __name__ == '__main__':
+#   app.run(debug=True, port=achar_porta_livre())

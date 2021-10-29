@@ -9,6 +9,15 @@ Logged in as emmanuel.oliveira3@gmail.com
 Creating app... done, ⬢ powerful-taiga-01050
 https://powerful-taiga-01050.herokuapp.com/ | https://git.heroku.com/powerful-taiga-01050.git
 
+https://devcenter.heroku.com/articles/git#prerequisites-install-git-and-the-heroku-cli
+heroku git:remote -a thawing-inlet-61413
+
+heroku login
+% git init
+% heroku git:remote -a thawing-inlet-61413
+% git add.
+% git commit -am "Pontapé inicial"
+% git push heroku master
 
 REFERÊNCIAS:
 
