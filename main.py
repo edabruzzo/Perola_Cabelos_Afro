@@ -1,16 +1,27 @@
-# This is a sample Python script.
+import dash
+from dash.dependencies import Input, Output
+import plotly.express as px
+import pandas as pd
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def inicializa():
+   return render_template('template_3.html')
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def achar_porta_livre():
+   import socket
+   from contextlib import closing
+   '''
+   https://stackoverflow.com/questions/1365265/on-localhost-how-do-i-pick-a-free-port-number
+   '''
+   with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
+      s.bind(('', 0))
+      s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+      return s.getsockname()[1]
 
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+   app.run(debug=True, port=achar_porta_livre())
