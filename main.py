@@ -18,7 +18,7 @@ def inicializa():
                          if os.path.isfile(os.path.join(diretorio_fotos, arquivo_foto))]
    lista_fotos_portfolio = [arquivo_foto for arquivo_foto in os.listdir(diretorio_fotos_portfolio)
                          if os.path.isfile(os.path.join(diretorio_fotos_portfolio, arquivo_foto))]
-   return render_template('template_3.html',
+   return render_template('template.html',
                           lista_fotos_header=lista_fotos_header,
                           lista_fotos_portfolio=lista_fotos_portfolio)
 

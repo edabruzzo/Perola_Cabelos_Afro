@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-
     <title>Pérola Cabelos Afro</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,8 +19,6 @@
     <style>
 h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
 body {font-family: "Open Sans"}
-
-
     </style>
 </head>
 <body class="w3-light-grey">
@@ -42,6 +39,7 @@ body {font-family: "Open Sans"}
        class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
     <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
        class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contatos</a>
     <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
 </div>
 
@@ -117,6 +115,56 @@ and is wrapped around the whole page content, except for the footer in this exam
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 <script>$('.carousel').carousel({ interval: 1500})</script>
+
+
+{% block contato %}
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">Agende seu horário</h2>
+<!--    <p class="w3-opacity w3-center"><i>Agende seu horário</i></p> -->
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i>
+          Atendemos no Centro Estético Denys Soares
+
+          R. Custódio Machado, n. 23 - V. Livieiro - Sacomã
+
+          São Paulo, SP - A cidade que não é sopa
+          <br>
+
+          <a href="https://moovitapp.com/sao_paulo-242/poi/Centro%20Est%C3%A9tico%20Denis%20Soares/Term.%20Sacoma%20(Sacom%C3%A3%20Terminal)/pt-br?tll=-23.6513_-46.59876&fll=-23.603638_-46.602434&customerId=4908&ref=1&poiType=ehsite"
+             target="_blank" rel="noopener noreferrer"
+       class="w3-bar-item w3-button"><i class="fa fa-map-marker" style="width:30px"></i>
+
+              Como chegar ?
+
+          </a>
+
+        <i class="fa fa-phone" style="width:30px"></i> WhatsApp: 11 98559-6904<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: passeiodospoetas@gmail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Nome">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="WhatsApp">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
+
+
 
 </body>
 </html>
