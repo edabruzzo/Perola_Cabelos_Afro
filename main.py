@@ -24,4 +24,4 @@ def achar_porta_livre():
       return s.getsockname()[1]
 
 if __name__ == '__main__':
-   app.run(debug=True, port=achar_porta_livre())
+   app.run(debug=True, host="0.0.0.0", port=achar_porta_livre())
