@@ -218,6 +218,10 @@ function esconderAbout() {
   var x = document.getElementById("about");
   if (x.style.display === "none") {
     x.style.display = "block";
+    setTimeout(function () {
+         x.style.display = "none";
+    }, 15000);
+
   } else {
     x.style.display = "none";
   }
