@@ -46,6 +46,16 @@ body {font-family: "Open Sans"}
     <a href="#about" class="w3-bar-item w3-button" onclick="esconderAbout()">Um pouquinho sobre mim</a>
     <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
 
+
+    <div class="w3-bar-item w3-button w3-right">
+ <audio controls autoplay loop>
+  <source src="{{ url_for('static', filename='audios/Ex-Factor.mp3') }}" type="audio/mpeg">
+     <p>If you can read this, your browser does not support the audio element.</p>
+</audio>
+   <!-- <iframe style="display:block" width="560" height="315" src="https://www.youtube.com/embed/kBhi0E0znzc?start=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+</div>
+
+
 </div>
 
 
@@ -195,7 +205,6 @@ body {font-family: "Open Sans"}
         </div>
 
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
