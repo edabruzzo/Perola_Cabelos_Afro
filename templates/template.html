@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="icon" type="image/png" href="static/fotos_uteis/imagem_marca.png"/>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -24,84 +26,49 @@ body {font-family: "Open Sans"}
 
 
 
+
     </style>
 
 
 </head>
 <body class="w3-light-grey">
 
-
-<!-- Navigation bar with social media icons -->
-<div class="w3-bar w3-black w3-xlarge">
-    <a href="https://www.facebook.com/perola.oliveira.16" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
-    <a href="#about" class="w3-bar-item w3-button" onclick="esconderAbout()">Um pouquinho sobre mim</a>
-    <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
-
-    <script>
-        document.getElementById('audioplay').play()
-
-    </script>
-
-    <div class="w3-bar-item w3-button w3-right">
-        <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio-->
-        <audio controls autoplay loop id="audioplay">
-            <source src="{{ url_for('static', filename='audios/Ex-Factor.mp3') }}" type="audio/mpeg">
-        </audio>
-        <!-- <iframe style="display:block" width="560" height="315" src="https://www.youtube.com/embed/kBhi0E0znzc?start=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-    </div>
-
-
-</div>
+{% block header %}
+{% include 'header.html' %}
+{% endblock %}
 
 
 {% block contato %}
-
 {% include 'contato.html' %}
-
 {% endblock %}
 
 {% block agendamento %}
-
 {% include 'agendamento.html' %}
-
 {% endblock %}
 
 {% block portfolio %}
-
 {% include 'portfolio.html' %}
-
 {% endblock %}
 
 <div id="footer">
-    {%  block footer %}
-        {% include 'footer.html' %}
+    {% block footer %}
+    {% include 'footer.html' %}
     {% endblock %}
 </div>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-    <script>$('.carousel').carousel({ interval: 1500})</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script>$('.carousel').carousel({ interval: 1500})</script>
 
 
 <script>
@@ -118,6 +85,7 @@ function esconderAbout() {
     x.style.display = "none";
   }
 }
+
 
 </script>
 
