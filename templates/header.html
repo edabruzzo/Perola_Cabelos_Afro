@@ -1,23 +1,10 @@
 {% block header %}
 <!-- Navigation bar with social media icons -->
-<div class="w3-bar w3-black w3-xlarge">
+<div class="w3-bar w3-black">
 
-    <img src="static/fotos_uteis/imagem_marca_2.png" alt="Uber"
-         style="width:100%"
-         class="w3-grayscale w3-left w3-large">
+    {% include 'imagem_marca_1.html' %}    {% include 'imagem_blackpower.html' %}
 
-    <a href="https://www.facebook.com/perola.oliveira.16" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
-    <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
-       class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+        {% include 'links_redes_sociais.html' %}
     <a href="#about" class="w3-bar-item w3-button" onclick="esconderAbout()">Um pouquinho sobre mim</a>
     <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
 
@@ -35,8 +22,7 @@
         <!-- <iframe style="display:block" width="560" height="315" src="https://www.youtube.com/embed/kBhi0E0znzc?start=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
     </div>
 
-    <img src="static/fotos_uteis/imagem_marca.png" alt="Uber"
-         style="width:100%"
-         class="w3-black w3-right ">
+
+
 </div>
 {% endblock %}
