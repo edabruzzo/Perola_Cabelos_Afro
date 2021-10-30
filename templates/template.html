@@ -43,8 +43,9 @@ body {font-family: "Open Sans"}
        class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
     <a href="https://www.instagram.com/perolacabelosafro/" target="_blank" rel="noopener noreferrer"
        class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
-    <a href="#about" class="w3-bar-item w3-button">Um pouquinho sobre mim</a>
+    <a href="#about" class="w3-bar-item w3-button" onclick="esconderAbout()">Um pouquinho sobre mim</a>
     <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+
 </div>
 
 
@@ -94,7 +95,32 @@ body {font-family: "Open Sans"}
 </div>
 
 
+
 {% endblock %}
+
+
+
+<div class="w3-white w3-margin" id="about" style=" display: none">
+    <img src="static/fotos/perfil_perola_.jpg" alt="Pérola" style="width:50%" class="w3-grayscale">
+    <div class="w3-container w3-black" style="width:50%">
+        <h4>Pérola</h4>
+        <p>Herança africana, mais especificamente Yorùbá, as tranças Nagô são um símbolo de resistência para
+            a população preta. </p>
+        <p>A arte de trançar é uma tradição em muitas famílias, como é o caso da trancista <a
+                rel="noreferrer noopener" href="https://www.instagram.com/perolacabelosafro/"
+                target="_blank"><strong>Pérola Oliveira</strong></a>,
+            que começou essa prática aos 12 anos, observando e admirando o trabalho de sua tia.</p>
+        <p>Tia Cida, ou Dona Conceição, como todos a conhecem é uma exímia trancista Nagô muito conhecida,
+            respeitada e querida no Bairro do Ipiranga, na cidade de São Paulo, onde vive há várias décadas</p>
+        <p>Mulher preta de fibra, assim como minha mãe, Dona Zilda, que mantém viva a tradição Yorùbá do ato
+            de trançar, que é um ato de Resistência Preta</p>
+        <p>Esta página e este trabalho é dedicado a esta maravilhosa mulher preta, que tanto nos inspira</p>
+        <p>Gratidão aos Ancestrais e às Divindades por ter nascido no seio desta família e ter tido o
+            privilégio de colher ensinamentos e ter a convivência com minha querida Tia, que me ensinou tudo
+            o que sei em termos de Tranças Nagô</p>
+
+    </div>
+</div>
 
 
 <div id="main">
@@ -185,28 +211,17 @@ body {font-family: "Open Sans"}
 </div>
 
 
-<div class="w3-white w3-margin" id="about">
-    <img src="static/fotos/perfil_perola_.jpg" alt="Pérola" style="width:50%" class="w3-grayscale">
-    <div class="w3-container w3-black" style="width:50%">
-        <h4>Pérola</h4>
-        <p>Herança africana, mais especificamente Yorùbá, as tranças Nagô são um símbolo de resistência para
-            a população preta. </p>
-        <p>A arte de trançar é uma tradição em muitas famílias, como é o caso da trancista <a
-                rel="noreferrer noopener" href="https://www.instagram.com/perolacabelosafro/"
-                target="_blank"><strong>Pérola Oliveira</strong></a>,
-            que começou essa prática aos 12 anos, observando e admirando o trabalho de sua tia.</p>
-        <p>Tia Cida, ou Dona Conceição, como todos a conhecem é uma exímia trancista Nagô muito conhecida,
-            respeitada e querida no Bairro do Ipiranga, na cidade de São Paulo, onde vive há várias décadas</p>
-        <p>Mulher preta de fibra, assim como minha mãe, Dona Zilda, que mantém viva a tradição Yorùbá do ato
-            de trançar, que é um ato de Resistência Preta</p>
-        <p>Esta página e este trabalho é dedicado a esta maravilhosa mulher preta, que tanto nos inspira</p>
-        <p>Gratidão aos Ancestrais e às Divindades por ter nascido no seio desta família e ter tido o
-            privilégio de colher ensinamentos e ter a convivência com minha querida Tia, que me ensinou tudo
-            o que sei em termos de Tranças Nagô</p>
 
-    </div>
-</div>
+<script>
 
-
+function esconderAbout() {
+  var x = document.getElementById("about");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
