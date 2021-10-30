@@ -22,6 +22,7 @@ body {font-family: "Open Sans"}
 
 
 
+
     </style>
 
 
@@ -46,14 +47,17 @@ body {font-family: "Open Sans"}
     <a href="#about" class="w3-bar-item w3-button" onclick="esconderAbout()">Um pouquinho sobre mim</a>
     <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
 
+    <script>
+        document.getElementById('audioplay').play()
+    </script>
 
     <div class="w3-bar-item w3-button w3-right">
- <audio controls autoplay loop>
-  <source src="{{ url_for('static', filename='audios/Ex-Factor.mp3') }}" type="audio/mpeg">
-     <p>If you can read this, your browser does not support the audio element.</p>
-</audio>
-   <!-- <iframe style="display:block" width="560" height="315" src="https://www.youtube.com/embed/kBhi0E0znzc?start=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-</div>
+        <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio-->
+        <audio controls autoplay loop id="audioplay">
+            <source src="{{ url_for('static', filename='audios/Ex-Factor.mp3') }}" type="audio/mpeg">
+        </audio>
+        <!-- <iframe style="display:block" width="560" height="315" src="https://www.youtube.com/embed/kBhi0E0znzc?start=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+    </div>
 
 
 </div>
@@ -105,15 +109,13 @@ body {font-family: "Open Sans"}
 </div>
 
 
-
 {% endblock %}
-
 
 
 <div class="w3-white w3-margin" id="about" style=" display: none">
     <img src="static/fotos/perfil_perola_.jpg" alt="Pérola" style="width:50%" class="w3-grayscale">
     <div class="w3-container w3-black" style="width:50%">
-<!--        <a href="javascript:void(0)" class="closebtn w3-large" style="right" onclick="esconderAbout()">&times;</a>-->
+        <!--        <a href="javascript:void(0)" class="closebtn w3-large" style="right" onclick="esconderAbout()">&times;</a>-->
         <h4>Pérola</h4>
         <button type="button" class="closebtn" onclick="esconderAbout()">Esconder</button>
         <p>Herança africana, mais especificamente Yorùbá, as tranças Nagô são um símbolo de resistência para
@@ -222,7 +224,6 @@ body {font-family: "Open Sans"}
 </div>
 
 
-
 <script>
 
 function esconderAbout() {
@@ -237,6 +238,7 @@ function esconderAbout() {
     x.style.display = "none";
   }
 }
+
 </script>
 </body>
 </html>
