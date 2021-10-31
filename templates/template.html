@@ -19,14 +19,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
-body {font-family: "Open Sans"}
-
-
-
-
-
-
+    h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+    body {font-family: "Open Sans"}
     </style>
 
 
@@ -41,6 +35,17 @@ body {font-family: "Open Sans"}
 {% block contato %}
 {% include 'contato.html' %}
 {% endblock %}
+
+{% block about %}
+{% include 'about.html' %}
+{% endblock %}
+
+
+
+{% block localizacao %}
+{% include 'localizacao.html' %}
+{% endblock %}
+
 
 {% block agendamento %}
 {% include 'agendamento.html' %}
@@ -74,6 +79,7 @@ body {font-family: "Open Sans"}
 <script>
 
 function esconderAbout() {
+  document.getElementById("mapas").style.display = "none";
   var x = document.getElementById("about");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -86,6 +92,19 @@ function esconderAbout() {
   }
 }
 
+
+function esconderMapas() {
+  var x = document.getElementById("mapas");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    setTimeout(function () {
+         x.style.display = "none";
+    }, 30000);
+
+  } else {
+    x.style.display = "none";
+  }
+}
 
 </script>
 
